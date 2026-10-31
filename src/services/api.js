@@ -5,7 +5,7 @@ async function postFrappeMethod(method, values) {
   Object.entries(values).forEach(([key, value]) => body.append(key, value));
 
   const response = await fetch(
-    `https://erp.itgenie.online/api/method/${method}`,
+    `https://erp.homegeniegroup.in/api/method/${method}`,
     {
       method: "POST",
       credentials: "include",
@@ -61,7 +61,7 @@ export function createBioCultureOrder(values) {
 }
 export async function getBioCultureStates(signal) {
   const response = await fetch(
-    "https://erp.itgenie.online/api/method/create_bioculture_order?action=get_states",
+    "https://erp.homegeniegroup.in/api/method/create_bioculture_order?action=get_states",
     { method: "GET", credentials: "include", signal },
   );
   if (!response.ok) throw new Error("Unable to load states");
